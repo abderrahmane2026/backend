@@ -49,7 +49,7 @@ const upload = multer({ storage: storage });
 // signup function
 const signupUser = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password ,role} = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
     // const fileName = req.file.filename;
     // const basepath = `${req.protocol}://${req.get("host")}/public/images/`;
@@ -57,6 +57,7 @@ const signupUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      role,
       // avatar: `${basepath}${fileName}`,
     });
     await user.save();

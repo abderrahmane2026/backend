@@ -55,6 +55,7 @@ const createProduct = async (req, res) => {
       quantity,
       image: `${basepath}${fileName}`,
       review,
+     
       company,
       category,
     });

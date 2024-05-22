@@ -10,8 +10,10 @@ const productSchema = new Schema(
     quantity: Number,
     image: String,
     review: String,
+   
     company: String,
     category: String,
+
   },
   {
     timestamps: true,
